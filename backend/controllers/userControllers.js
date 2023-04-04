@@ -6,7 +6,7 @@ const user = db.User;
 module.exports = {
     getAllUser: async (req, res) => {
         try {
-            const data = user.findAll();
+            const data = await user.findAll();
             res.status(200).send({
                 status: true,
                 data
